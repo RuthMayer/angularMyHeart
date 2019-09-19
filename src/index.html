@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href=environment.domain>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- <script src="/__/firebase/init.js"></script> -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <!-- <script src="/__/firebase/6.6.1/firebase-app.js"></script> -->
+
+  <!-- Add Firebase products that you want to use -->
+  <!-- <script src="/__/firebase/6.6.1/firebase-auth.js"></script>
+  <script src="/__/firebase/6.6.1/firebase-firestore.js"></script> -->
+  <!-- --------------------------------------------------------------------------------------- -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="indexStyle.js"></script>
+  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#card").hide();
+    $("#wrapper").hide();
+    
+  });
+  $("#show").click(function(){
+    $("#card").hide();
+    $("#wrapper").hide();
+
+  });
+  $("#about").click(function(){
+    $("#card").hide();
+    $("#wrapper").hide();
+
+  });
+  $("#about").click(function(){
+    $("#hide").hide();
+    $("#show").hide();
+
+  });
+});
+</script>
+
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/905237/bonsaiUI-custombuild.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <div id="roots">
+  </div>
+  <div class="navbar fixed-top" role="navigation">
+    <div class="brand"><span class="iconify" id="icon" data-icon="ion:ios-heart-empty" data-inline="false"></span> <a
+        target='_blank'>H e a r t B o t</a> </div>
+        <ul class="flt-right">
+            <li  ><a  [routerLink]="['/about']" class="btn-outlined hidden-md"  id="about"target="_blank"
+                > <span class="iconify" data-icon="mdi:information" id="iconAbout"data-inline="false"></span>-About-</a> 
+          </ul>
+        <ul class="flt-right" id="SendEmail">
+          <li><a class="btn-outlined hidden-md" target="_blank"
+              href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&osid=1&service=mail&ss=1&ltmpl=default&rm=false"><span class="iconify"id="Email" data-icon="dashicons:email-alt" data-inline="false"></span>-SendEmail-</a>
+          </li>
+        </ul>
+    <ul class="flt-right">
+      <li><a class="btn-outlined hidden-md" target="_blank"
+          href="chat.html"> <span class="iconify" id="support" data-icon="si-glyph:customer-support" data-inline="false"></span>-support-</a>
+      </li>
+    </ul>
+  
+  
+
+  </div>
+
+  <app-root></app-root>
+
+  <div class="wrapper" id="wrapper">
+    <input type="checkbox" id="menuToggler" class="input-toggler" value="1" autofocus="true" />
+    <label for="menuToggler" id="menuTogglerLabel" class="menu-toggler" role="button" aria-pressed="false"
+      aria-expanded="false" aria-label="Navigation button">
+      <span class="menu-toggler__line"></span>
+      <span class="menu-toggler__line"></span>
+      <span class="menu-toggler__line"></span>
+    </label>
+    <nav id="sidebar" class="sidebar" role="navigation" aria-labelledby="menuTogglerLabel" aria-hidden="true">
+      <div id="sidebar">
+      <ul id="menubar" class="menu" role="menubar" aria-orientation="vertical"style="margin-left:20%">
+        <li class="menu__item" role"none" id="home"><a class="menu__link" href="http://localhost:4200/" role="menuitem" tabindex="-1"><i class="fas fa-home"></i></a></li>
+        <li class="menu__item" role"none" id="clock"><a class="menu__link" href="https://shaonolami.co.il/tel-aviv/" role="menuitem" tabindex="-1"><i class="far fa-clock"></i></a></li>
+        <li class="menu__item" role"none"><a class="menu__link" href="https://shaonolami.co.il/%d7%9c%d7%95%d7%97-%d7%a9%d7%a0%d7%94/" role="menuitem" tabindex="-1"><i class="far fa-calendar-alt"></i></a></li>
+
+      </ul>
+    </div>
+    </nav>
+
+
+  </div>
+      <div class="card default-color-dark" id="card">
+
+     
+      <div class="view">
+        <img src="https://lh3.googleusercontent.com/-IM0h9F5WUOY/XX3xs2bwF3I/AAAAAAAAE2I/RwSVwuIqelAj9SzuI0Nr4-hSueo0CcMeQCK8BGAsYHg/s0/2019-09-15.png" class="card-img-top" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+
+      <div class="card-body text-center"id="cardBody">
+        <h4 class="card-title white-text">- About us -</h4>
+        <p class="card-text white-text" ><br>a bot that question a potential heart patient in
+           questions that may indicate a heart disease and convert the information
+            to a pdf for the doctor and email it to him/her</p>
+        <a href="https://lh3.googleusercontent.com/-32tuD2GQYtM/XX3u71AFKlI/AAAAAAAAE1w/IHRUzPcaj-QzwcIcJ0SZRvGjw8YkAbKrwCK8BGAsYHg/s0/2019-09-15.png" class="btn btn-outline-white btn-md">H e a r t - B o t</a>
+      </div>
+
+    </div>
+
+  <footer class="fixed-bottom">
+    <div class="flt-left">2019</div>
+    <!-- <div class="icon">
+      <div class="clock">
+        <a  href="https://time.is/he/"></a>
+        <div class="circle"></div>
+        <div class="clockwise"></div>
+        <div class="shadows"></div>
+      </div>
+      <div class="map">
+          <div class="folded">
+            <div class="fold">
+              <div class="content"></div>
+            </div>
+            <div class="fold">
+              <div class="content">
+                <div class="other"></div>
+              </div>
+            </div>
+            <div class="fold">
+              <div class="content"></div>
+            </div>
+          </div>
+          <div class="shadow"></div>
+          <div class="flip"></div>
+          <div class="pin"></div>
+        </div>
+    </div> -->
+    <!-- <nav>
+        <a [routerLink]="priority">priority</a>
+      </nav> -->
+    <div class="flt-right">Created by: <a target='_blank'
+        href="https://lh3.googleusercontent.com/-H0ACW_vSxh0/XXC9ioQzk0I/AAAAAAAAEw0/6DkKC5ihgJc1RyHcbriPPVarr2YuEJ_rQCK8BGAs/s0/2019-09-05.jpg">Champions!!!</a>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

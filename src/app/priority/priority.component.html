@@ -1,0 +1,21 @@
+<div class="container">
+        <table mdbTable class="z-depth-1">
+          <thead>
+          <tr>
+            <th *ngFor="let head of headElements; let i = index" scope="col">{{head}}
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let el of allUser; let i = index" [id]="el.url" (click)="checked($event,el.url)">
+            <th scope="row"><mdb-icon fas icon="user"></mdb-icon></th>
+            <td >{{el.name}}</td>
+            <td>{{el.date}}</td>
+            <td>{{el.score}}</td>
+<td  (click)="update(el.url)"><mdb-icon fas icon="check-circle"></mdb-icon></td>            
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="btn-outlined hidden-md" id="return"><a href="../app.component.html"><i class="fas fa-home"> </i> Home Page</a></button>
+

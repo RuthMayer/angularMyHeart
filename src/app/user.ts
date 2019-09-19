@@ -1,0 +1,19 @@
+export class User{
+    constructor(id,idUser,score,date,url,checked,name)
+    {
+        this.checked=checked;
+        this.id=id;
+        this.idUser=idUser;
+        this.date=date;
+        this.name=name;
+        this.score=score;
+        this.url=url;
+    }
+    id:number;
+    idUser:string;
+    score:number;
+    url:string;
+    name:string;
+    checked:boolean;
+    date:string;
+}

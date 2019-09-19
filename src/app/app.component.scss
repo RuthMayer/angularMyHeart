@@ -1,0 +1,46 @@
+#components{
+margin-top: 0.44em;
+}
+#hide {
+    text-align: center;
+    margin-left: 15.90em;
+    margin-right: -0.50em;
+ }
+
+#show {
+    text-align: center;
+    margin-left: 2.365em;
+}
+#card {
+    margin-left: 0.70em;
+    margin-top: -0.85em;
+    width: 0.27em;
+    height: 0.56em;
+}
+.default-color-dark {
+    background-color: #00695c !important;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0.000625em solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0.000625em solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}

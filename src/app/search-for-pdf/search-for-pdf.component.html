@@ -1,0 +1,60 @@
+
+<div id="name" class="container">
+  
+    <div class="md-form">
+        <input type="text" [(ngModel)]="searchText" class="form-control" id="search" mdbInput>
+        <label for="search">Search</label>
+      </div>
+        <div class="row">
+                      
+          <div class="col">  
+            <table mdbTable class="z-depth-1" id="name">
+              <thead>
+              <tr>
+                <th  scope="col" >NAME
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let el of filterUser; let i = index" (click)="onSelect(el.id)">
+                  <th scope="row" >{{el.name}}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      
+         
+          <div class="col">
+             <div id="pdf">
+              <table mdbTable class="z-depth-1" id="secondName">
+                <tbody>
+                    <tr>
+                        <th  scope="col" >NAME
+                        </th>
+                      </tr>
+                <tr *ngFor="let el of shoepdf; let i = index" >
+                  <th scope="row" >{{el.date}}</th>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+      <div class="w-100"></div>
+        
+    </div>
+
+  
+  
+  </div>
+  
+
+  <button class="btn-outlined hidden-md" id="return"><a href="../app.component.html"><i class="fas fa-home"> </i> Home Page</a></button>
+
+
+
+  <!-- *ngIf="shoepdf" -->
+
+ 
+
+
+  
